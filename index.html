@@ -1,0 +1,353 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Awesome Discord Server</title>
+    <meta name="description" content="Check out my Discord server where we play games, stream daily, and have an awesome community!">
+    <meta name="keywords" content="Discord, Discord server, games, streaming, community, YouTube, 90k, daily stream">
+    <meta name="author" content="Your Name/Your YouTube Channel Name">
+
+    <meta property="og:title" content="My Awesome Discord Server">
+    <meta property="og:description" content="Join our vibrant Discord community! We've got exciting games, daily streams, and much more.">
+    <meta property="og:image" content="URL_TO_YOUR_DISCORD_SERVER_INVITE_IMAGE">
+    <meta property="og:url" content="YOUR_WEBSITE_URL">
+    <meta property="og:type" content="website">
+
+    <link rel="icon" href="URL_TO_YOUR_SERVER_ICON" type="image/png">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .dark {
+            background-color: #111827; /* Dark background */
+            color: #f9fafb; /* Light text */
+        }
+        .light {
+            background-color: #f9fafb; /* Light background */
+            color: #111827; /* Dark text */
+        }
+        .font-bold {
+            font-weight: 700;
+        }
+        .fade-in {
+            animation: fadeIn 1s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; }
+            to { opacity: 1; }
+        }
+        .hover-zoom {
+            transition: transform 0.3s ease-in-out;
+        }
+        .hover-zoom:hover {
+            transform: scale(1.05);
+        }
+        .bot-box { /* New class for the bot boxes */
+            transition: transform 0.2s ease-in-out; /* Smooth transition */
+        }
+        .bot-box:hover { /* Hover effect */
+            transform: scale(1.03); /* Slightly increase size on hover */
+        }
+        .game-box {
+            transition: transform 0.2s ease-in-out;
+        }
+        .game-box:hover{
+            transform: scale(1.03);
+        }
+        .title-hover {
+            transition: transform 0.3s ease-in-out;
+        }
+        .title-hover:hover {
+            transform: scale(1.08);
+        }
+    </style>
+</head>
+<body class="bg-gray-900 text-white dark">
+    <header class="bg-gray-800 bg-opacity-50 backdrop-blur-md py-4 sticky top-0 z-10 shadow-lg">
+        <div class="container mx-auto px-4 flex justify-between items-center">
+            <a href="#" class="text-xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 fade-in title-hover">
+                𝓒𝓛𝓐𝓢𝓢𝝨𝓨_𝓐𝓡𝓜𝝨
+            </a>
+            <nav class="hidden md:block">
+                <ul class="flex space-x-6">
+                    <li><a href="#bots" class="hover:text-purple-300 transition duration-300">Bots</a></li>
+                    <li><a href="#games" class="hover:text-purple-300 transition duration-300">Games</a></li>
+                    <li><a href="#community" class="hover:text-purple-300 transition duration-300">Community</a></li>
+                    <li>
+                        <a href="https://discord.gg/V3AxSb54Ue" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 transition-all duration-300">
+                            Join Us
+                        </a>
+                    </li>
+                    <li>
+                        <button id="theme-toggle" class="text-white focus:outline-none" aria-label="Toggle Theme">
+                            <svg id="theme-light-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 hidden">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.636l-.707.707M21 12h-2.25m-.636 6.364l-.707-.707M12 21v-2.25m-6.364-.636l.707-.707M3 12h2.25m.636-6.364l.707.707M12 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM12 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM12 16.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            <svg id="theme-dark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                            </svg>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+            <button id="hamburger-btn" class="md:hidden text-white focus:outline-none" aria-label="Toggle Navigation">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                    <path stroke-linecap="round" stroke-linejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25h16.5" />
+                </svg>
+            </button>
+        </div>
+    </header>
+
+    <div id="mobile-menu" class="hidden fixed top-0 left-0 w-full h-full bg-gray-900 bg-opacity-90 z-20">
+        <div class="bg-gray-800 w-80 h-full absolute right-0 p-6">
+            <div class="flex justify-end mb-4">
+                <button id="close-menu-btn" class="text-white focus:outline-none" aria-label="Close Menu">
+                     <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
+                        <path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12" />
+                    </svg>
+                </button>
+            </div>
+            <nav class="block">
+                <ul class="space-y-4">
+                    <li><a href="#bots" class="block text-lg text-white hover:text-purple-300 transition duration-300">Bots</a></li>
+                    <li><a href="#games" class="block text-lg text-white hover:text-purple-300 transition duration-300">Games</a></li>
+                    <li><a href="#community" class="block text-lg text-white hover:text-purple-300 transition duration-300">Community</a></li>
+                    <li>
+                        <a href="https://discord.gg/V3AxSb54Ue" target="_blank" rel="noopener noreferrer" class="block bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 text-center transform hover:scale-105 transition-all duration-300">
+                            Join Us
+                        </a>
+                    </li>
+                     <li>
+                        <button id="mobile-theme-toggle" class="text-white focus:outline-none flex items-center" aria-label="Toggle Theme">
+                            <svg id="mobile-theme-light-icon" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6 mr-2 hidden">
+                                <path stroke-linecap="round" stroke-linejoin="round" d="M12 3v2.25m6.364.636l-.707.707M21 12h-2.25m-.636 6.364l-.707-.707M12 21v-2.25m-6.364-.636l.707-.707M3 12h2.25m.636-6.364l.707.707M12 10.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM12 13.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3zM12 16.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3z" />
+                            </svg>
+                            <svg id="mobile-theme-dark-icon" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="w-6 h-6 mr-2">
+                                <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"></path>
+                            </svg>
+                            <span id="mobile-theme-text">Dark Mode</span>
+                        </button>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="container mx-auto px-4 py-8">
+        <section id="hero" class="text-center mb-16">
+            <h1 class="text-6xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-4 fade-in title-hover">
+                𝓒𝓛𝓐𝓢𝓢𝝨𝓨_𝓐𝓡𝓜𝝨
+            </h1>
+            <p class="text-xl text-gray-300 mb-8 fade-in">
+                Your Ultimate Discord Server for Gaming, Streaming, and Community!
+            </p>
+        </section>
+
+        <div class="flex justify-center mb-16">
+            <img src="C:\Users\User\OneDrive\Documents\Classy server\classypfp.png" alt="Middle Image" style="max-width: 10%; height: auto; border-radius: 8px;" class="hover-zoom">
+        </div>
+        <div class="flex justify-center mb-16">
+            <a href="https://discord.gg/V3AxSb54Ue" target="_blank" rel="noopener noreferrer" class="bg-gradient-to-r from-purple-500 to-pink-500 hover:from-purple-600 hover:to-pink-600 text-white font-semibold py-3 px-6 rounded-full shadow-md transition duration-300 transform hover:scale-105 transition-all duration-300 text-xl fade-in">
+                Join Us Now
+            </a>
+        </div>
+
+        <section id="about" class="mb-16 rounded-lg bg-white bg-opacity-5 backdrop-blur-md p-6 shadow-md border border-gray-700 fade-in">
+            <h2 class="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-6 text-center font-bold">About Me</h2>
+            <div class="text-center text-gray-300">
+                <p class="text-lg mb-4">
+ 
+                    Hey there! 👋 I'm Arnav, a passionate Twitch creator with over 90K+ followers! 🎮✨ I stream Minecraft and other exciting games, sharing fun and epic moments with my amazing community. 💥🔥 Gaming and streaming aren’t just hobbies—they’re my passion! I also love creating edits 🎨, especially for CSK content, and I have expertise in digital works, including graphics, editing, and Discord management. 🖥️💡 Beyond streaming, I work as a trader while building my presence in the digital space. 🚀💰 If you’re looking to be part of the adventure, make sure to join my Discord and stay tuned for my Twitch updates! 🌍🎭
+                    Hope you like this version! Let me know if you'd like any more tweaks. 😃🔥🚀<br><br>
+
+                    नमस्ते! 👋 मैं अर्नव हूँ, एक Twitch क्रिएटर जिसके पास 90K+ फॉलोअर्स हैं! 🎮✨ मैं Minecraft और अन्य रोमांचक गेम्स स्ट्रीम करता हूँ, जहाँ मैं अपनी शानदार कम्युनिटी के साथ मज़ेदार और यादगार पल साझा करता हूँ। 💥🔥 गेमिंग और स्ट्रीमिंग सिर्फ मेरे शौक़ नहीं हैं—ये मेरी पैशन हैं! मैं एडिटिंग 🎨, ख़ासकर CSK कंटेंट बनाना पसंद करता हूँ, और मुझे डिजिटल वर्क्स में महारत हासिल है, जिसमें ग्राफिक्स, एडिटिंग और Discord मैनेजमेंट शामिल हैं। 🖥️💡 स्ट्रीमिंग के अलावा, मैं एक ट्रेडर के रूप में काम करता हूँ और डिजिटल दुनिया में अपनी पहचान बना रहा हूँ। 🚀💰 अगर आप इस एडवेंचर का हिस्सा बनना चाहते हैं, तो मेरे Discord से जुड़ें और Twitch अपडेट्स के लिए तैयार रहें! 🌍🎭
+                    उम्मीद है आपको यह वर्जन पसंद आएगा! 😃🔥🚀 अगर कोई और बदलाव चाहिए, तो मुझे बताएं।
+
+                    
+
+
+                </p>
+                <p class="text-lg mb-4">
+                    I'm dedicated to making this a positive and inclusive space for everyone. I believe in fostering a community where everyone feels welcome, respected, and valued.  So, whether you're a hardcore gamer, a casual streamer, or just someone looking for a cool place to hang out, you're in the right place!
+                </p>
+            </div>
+        </section>
+
+        <section id="bots" class="mb-16 rounded-lg bg-white bg-opacity-5 backdrop-blur-md p-6 shadow-md border border-gray-700 fade-in">
+            <h2 class="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-6 text-center font-bold">Our Bots</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg shadow-md p-6 border border-gray-700 bot-box">
+                    <h3 class="text-xl font-semibold text-white mb-2">PAPPU</h3>
+                    <p class="text-white mb-4">
+                        PAPPU Is A Exiting Chat Bot For GEN Z Peoples For Fun
+                    </p>
+                    <ul class="list-disc list-inside text-white">
+                        <li>Fun To Talk</li>
+                        <li>To Much Friendly And Cool</li>
+                        <li>Answers Is Fast Detailed And In The Most Gen Z Way</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg shadow-md p-6 border border-gray-700 bot-box">
+                    <h3 class="text-xl font-semibold text-white mb-2">OLLY</h3>
+                    <p class="text-white mb-4">
+                        OLLY Is A Exiting Chat Bot For GEN Z Peoples For Fun
+                    </p>
+                    <ul class="list-disc list-inside text-white">
+                        <li>Custom Channel To Talk</li>
+                        <li>Fun To Talk</li>
+                        <li>Direct And Fast Answers</li>
+                    </ul>
+                </div>
+                <div class="bg-gradient-to-br from-purple-500 to-pink-500 rounded-lg shadow-md p-6 border border-gray-700 bot-box">
+                    <h3 class="text-xl font-semibold text-white mb-2">CLASSY TICKET TOOL</h3>
+                    <p class="text-white mb-4">
+                        CLASSY TICKET TOOL is a very useful bot for managing tickets.
+                    </p>
+                    <ul class="list-disc list-inside text-white">
+                        <li>Ticket creation</li>
+                        <li>Ticket assignment</li>
+                        <li>Ticket management</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+
+        <section id="games" class="mb-16 rounded-lg bg-white bg-opacity-5 backdrop-blur-md p-6 shadow-md border border-gray-700 fade-in">
+            <h2 class="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-6 text-center font-bold">Games We Play</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                 <div class="bg-gray-800 rounded-lg shadow-md p-4 border border-gray-700 game-box">
+                    <h3 class="text-xl font-semibold text-purple-300 mb-2">Among Us</h3>
+                    <p class="text-gray-400 mb-2">Join us as we try to find the imposter... or maybe you are the imposter!</p>
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-md flex items-center justify-center">
+                        <span class="text-gray-300">Among Us</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-md p-4 border border-gray-700 game-box">
+                    <h3 class="text-xl font-semibold text-purple-300 mb-2">Fortnite</h3>
+                    <p class="text-gray-400 mb-2">  We drop into Fortnite daily. Join us for squads, duos, or creative mayhem.</p>
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-md flex items-center justify-center">
+                        <span class="text-gray-300">Fortnite</span>
+                    </div>
+                </div>
+                <div class="bg-gray-800 rounded-lg shadow-md p-4 border border-gray-700 game-box">
+                    <h3 class="text-xl font-semibold text-purple-300 mb-2">Minecraft</h3>
+                    <p class="text-gray-400 mb-2">  Explore our Minecraft server, build amazing structures, and embark on epic adventures.</p>
+                    <div class="aspect-w-16 aspect-h-9 bg-gray-700 rounded-md flex items-center justify-center">
+                         <span class="text-gray-300">Minecraft</span>
+                    </div>
+                </div>
+                </div>
+             <p class="mt-8 text-gray-300 text-center">
+                ...and many more! We're always exploring new games and expanding our gaming community.  Join us in the voice channels and let's play!
+            </p>
+        </section>
+
+        <section id="community" class="mb-16 rounded-lg bg-white bg-opacity-5 backdrop-blur-md p-6 shadow-md border border-gray-700 fade-in">
+            <h2 class="text-3xl font-semibold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-pink-600 mb-6 text-center font-bold">Our Community</h2>
+            <div class="text-center text-gray-300">
+                <p class="text-lg mb-4">
+                    We're more than just a gaming server; we're a family.  We pride ourselves on being a welcoming, inclusive, and supportive community.  Whether you're a long-time fan or new to my channel, you'll feel right at home here.
+                </p>
+                <p class="text-lg mb-4">
+                    Here's what you can expect:
+                </p>
+                <ul class="list-disc list-inside text-left inline-block">
+                    <li>A friendly and active chat</li>
+                    <li>Regular voice channels for gaming and hanging out</li>
+                    <li>Community events and game nights</li>
+                    <li>A place to share your content and connect with other creators</li>
+                    <li>Direct interaction with me and other community members</li>
+                </ul>
+            </div>
+        </section>
+    </main>
+
+    <footer class="bg-gray-800 bg-opacity-50 backdrop-blur-md py-6 rounded-t-lg shadow-md border-t border-gray-700">
+        <div class="container mx-auto px-4 text-center text-gray-400 flex flex-col md:flex-row items-center justify-between">
+            <p class="mb-2 md:mb-0">
+                &copy; {new Date().getFullYear()} My Discord Server. All rights reserved.
+            </p>
+            <div class="flex items-center space-x-4">
+                <a href="YOUR_WEBSITE_URL" target="_blank" rel="noopener noreferrer" class="text-purple-300 hover:underline">Created by [Your Name/Your Brand]</a>
+                <a href="#" class="text-purple-300 hover:underline">Privacy Policy</a>
+                <a href="#" class="text-purple-300 hover:underline">Terms of Service</a>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        const hamburgerBtn = document.getElementById("hamburger-btn");
+        const mobileMenu = document.getElementById("mobile-menu");
+        const closeMenuBtn = document.getElementById("close-menu-btn");
+        const mobileMenuLinks = mobileMenu.querySelectorAll("a");
+        const navLinks = document.querySelectorAll('.nav-links a');
+        const sections = document.querySelectorAll('section');
+        const themeToggleBtn = document.getElementById('theme-toggle');
+        const themeLightIcon = document.getElementById('theme-light-icon');
+        const themeDarkIcon = document.getElementById('theme-dark-icon');
+        const mobileThemeToggleBtn = document.getElementById('mobile-theme-toggle');
+        const mobileThemeLightIcon = document.getElementById('mobile-theme-light-icon');
+        const mobileThemeDarkIcon = document.getElementById('mobile-theme-dark-icon');
+        const mobileThemeText = document.getElementById('mobile-theme-text');
+
+        function toggleMobileMenu() {
+            mobileMenu.classList.toggle("hidden");
+        }
+
+        hamburgerBtn.addEventListener("click", toggleMobileMenu);
+        closeMenuBtn.addEventListener("click", toggleMobileMenu);
+        mobileMenuLinks.forEach(link => {
+            link.addEventListener("click", toggleMobileMenu);
+        });
+
+        document.addEventListener('click', (event) => {
+            if (!mobileMenu.classList.contains('hidden') && !mobileMenu.contains(event.target) && event.target !== hamburgerBtn) {
+                toggleMobileMenu();
+            }
+        });
+
+       function updateActiveNavLink() {
+            let currentSectionId = '';
+            sections.forEach(section => {
+                const sectionTop = section.offsetTop;
+                const sectionHeight = section.clientHeight;
+                if (window.scrollY >= sectionTop - 100 && window.scrollY < sectionTop + sectionHeight - 100) {
+                    currentSectionId = section.getAttribute('id');
+                }
+            });
+
+            navLinks.forEach(link => {
+                link.classList.remove('active');
+                if (link.getAttribute('href').slice(1) === currentSectionId) {
+                    link.classList.add('active');
+                }
+            });
+        }
+
+        window.addEventListener('scroll', updateActiveNavLink);
+
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        const savedTheme = localStorage.getItem('theme');
+        let isDarkMode = savedTheme === 'dark';
+
+        function updateTheme() {
+            if (isDarkMode) {
+                document.documentElement.classList.add('dark');
+                document.documentElement.classList.remove('light');
+                themeLightIcon.classList.add('hidden');
+            }
+        }
